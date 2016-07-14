@@ -22,7 +22,20 @@
 			
 		</tr>
 		<tbody>
+		{{#each media in PlayList}}
+		<tr>
 			
+			<th>
+				{{media.priority}}
+			</th>
+			<th>
+				{{media.name}}
+			</th>
+			<th>
+				{{media.mediaForm}}
+			</th>
+		</tr>
+		{{/each}}
 		</tbody>
 	</table>
 </template>
