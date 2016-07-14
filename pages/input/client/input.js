@@ -17,7 +17,9 @@ Template.input.events(
 			const item = {createdAt:new Date(),mediaForm:genre, name:show, priority:episode, };
 			console.dir(item);
 			PlayList.insert(item);
+			Router.go("playlist");
 		},
-	}	
-)
 
+
+	}	
+);
