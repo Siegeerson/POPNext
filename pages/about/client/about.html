@@ -1,0 +1,21 @@
+<template name="about">
+<h1>Developers:</h1>
+<table class="table table-bordered"> 
+	<thead>
+		
+		<td><h3>Name</h3></td>
+		<td><h3>Email</h3></td>
+		
+	</thead>
+	
+	<tbody>	
+		{{#each developer in developers}}
+		<tr>
+			<td>{{developer.name}}</td>
+			<td>{{developer.email}}</td>
+		</tr>
+		{{/each}}
+	
+	</tbody>
+</table>
+</template>
