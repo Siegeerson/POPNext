@@ -22,7 +22,19 @@
 			
 		</tr>
 		<tbody>
-			
+		{{#each thing in userShow}}
+		<tr>
+			<th>
+				{{thing.priority}}
+			</th>
+			<th>
+				{{thing.name}}
+			</th>
+			<th>
+				{{thing.mediaForm}}
+			</th>
+		</tr>
+		{{/each}}
 		</tbody>
 	</table>
 </template>
