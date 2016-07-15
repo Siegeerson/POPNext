@@ -1,6 +1,7 @@
 <template name="playlist">
+	{{#if currentUser}}
 	<h1>
-		PlayList
+		Watch List
 	</h1>
 	<table class="table table-bordered">
 		<tr>
@@ -24,17 +25,20 @@
 		<tbody>
 		{{#each thing in userShow}}
 		<tr>
-			<th>
+			<td>
 				{{thing.priority}}
-			</th>
-			<th>
+			</td>
+			<td>
 				{{thing.name}}
-			</th>
-			<th>
+			</td>
+			<td>
 				{{thing.mediaForm}}
-			</th>
+			</td>
 		</tr>
 		{{/each}}
 		</tbody>
 	</table>
+	{{else}}
+    <h2>You must log in to see the Watch List</h2>
+  {{/if}}
 </template>
