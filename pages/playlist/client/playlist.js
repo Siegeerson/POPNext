@@ -8,3 +8,12 @@ Template.playlist.helpers(
 		}
 	}
 )
+
+Template.playlist.events(
+	{ 
+    "click .js-clear":function(events){
+
+      Meteor.call("clearShows");
+    },
+  
+  })
