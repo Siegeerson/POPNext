@@ -2,6 +2,13 @@
 	<h1>
 		PlayList
 	</h1>
+	<select>
+		{{#each list in userShow}}
+		<option>
+			{{list.listID}}
+		</option>
+		{{/each}}
+	</select>
 	<table class="table table-bordered">
 	<thead>
 		<tr>
