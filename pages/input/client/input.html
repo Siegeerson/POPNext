@@ -1,5 +1,6 @@
 <template name="input">
-	<h1>Add to watch list </h1>
+{{#if currentUser}}
+  <h1>Add to watch list </h1>
   
 
   <div class="form-group">
@@ -14,7 +15,30 @@
   <br>
 
   <h3>Media Type</h3> 
-  <input type="text" class="genre" placeholder="Type"> 
+  <select class="genre" >
+    <option>
+      Select Media Type
+    </option>
+    <option>
+      Book
+    </option>
+    <option>
+      Movie
+    </option>
+    <option>
+      TV
+    </option>
+    <option>
+      Audio Book
+    </option>
+    <option>
+      Other
+    </option>
+  </select>
+  <br>
   <br>
   <button  class="js-show-btn">Submit</button>
+  {{else}}
+    <h2>You must log in to add to Watch list</h2>
+  {{/if}}
   </template>
