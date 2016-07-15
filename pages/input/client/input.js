@@ -20,4 +20,3 @@ Template.input.events(
 		},
 	}	
 )
-
