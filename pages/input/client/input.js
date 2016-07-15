@@ -24,12 +24,15 @@ Template.input.events(
 
 		"click .js-show-btn": function(event)
 		{//   event.preventdefault();
+			 console.log(Meteor.userId());
 			console.log("clicked the button");
 			console.log("clicked button");
 			const genre = $(".genre").val();
 			const show = $(".show").val();
 			const episode = $(".episode").val();
-			const item = {createdAt:new Date(),mediaForm:genre, name:show, priority:episode, };
+			const link = $(".link").val();
+			
+			const item = {createdAt:new Date(),mediaForm:genre, name:show, priority:episode, mediaLink:link, userId:Meteor.userId()};
 			console.dir(item);
 			PlayList.insert(item);
 			Router.go("playlist");
