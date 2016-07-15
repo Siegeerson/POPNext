@@ -2,6 +2,9 @@ th {
 	background-color: #ccffff;
 	color: black;
 }
-th, td {
+thead{
+	padding: 15px;
+}
+tbody{
 	padding: 15px;
 }
