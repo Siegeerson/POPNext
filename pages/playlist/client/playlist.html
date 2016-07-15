@@ -4,21 +4,21 @@
 	</h1>
 	<table class="table table-bordered">
 		<tr>
-			<th>
+			<td>
 				<h2>
 					Priority
 				</h2>
-			</th>
-			<th>
+			</td>
+			<td>
 				<h2>
 					Name
 				</h2>
-			</th>
-			<th>
+			</td>
+			<td>
 				<h2>
 					Form of Media
 				</h2>
-			</th>
+			</td>
 			
 		</tr>
 		<tbody>
@@ -33,8 +33,12 @@
 			<td>
 				{{thing.mediaForm}}
 			</td>
+			<td>
+				<a href="{{thing.mediaLink}}">Link</a>
+			</td>
 		</tr>
 		{{/each}}
 		</tbody>
 	</table>
+	<button class="js-clear">Clear Shows</button>
 </template>
