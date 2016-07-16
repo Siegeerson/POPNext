@@ -34,7 +34,7 @@ Template.input.events(
 			const episode = $(".episode").val();
 			const link = $(".link").val();
 			console.log("id button pushed");
-			const listID =$ (".listID").val();
+			const listID =$ (".listid").val();
 			
 			const item = { createdAt:new Date(),mediaForm:genre, name:show, priority:episode, mediaLink:link, userId:Meteor.userId()};
 			console.dir(item,listID);
