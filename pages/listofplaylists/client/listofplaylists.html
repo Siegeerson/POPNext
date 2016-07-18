@@ -3,11 +3,11 @@
 	<ul>
 		{{#each list in UserLists}}
 			<li>
-			{{list.playlistName}}
-			<button type="button" class="btn btn-small btn-warning dlt-item">Delete</button>           
+				{{list.playlistName}}
+				<button type="button" class="btn btn-small btn-warning dlt-item">Delete</button>           
 
 			</li>
-		<input type="hidden" class="id" value="{{list._id}}">
+			<input type="hidden" class="id" value="{{list._id}}">
 		{{/each}}
 	</ul>
 	<h3>Create a New Playlist</h3>
