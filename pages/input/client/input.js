@@ -13,6 +13,7 @@ Template.input.helpers(
 	{
 		userShow:function()
 		{
+			
 			return UserLists.find({}
                       
                       )
@@ -38,13 +39,13 @@ Template.input.events(
 			 console.log(Meteor.userId());
 			console.log("clicked the button");
 			console.log("clicked button");
-			const listChoice(".listselect").val();
+			const listChoice= $(".listselect").val();
 			const genre = $(".genre").val();
 			const show = $(".show").val();
 			const episode = $(".episode").val();
 			const link = $(".link").val();
 			const list = $(".list").val();
-			const item = {listselect:listselectcreatedAt:new Date(),mediaForm:genre, name:show, priority:episode, mediaLink:link, play:list, userId:Meteor.userId()};
+			const item = {listselect:listChoice, createdAt:new Date(),mediaForm:genre, name:show, priority:episode, mediaLink:link, play:list, userId:Meteor.userId()};
 			console.dir(item);
 			PlayList.insert(item);
 			Router.go("playlist");

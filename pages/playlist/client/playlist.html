@@ -2,7 +2,9 @@
 	<h1>
 		PlayList
 	</h1>
-
+	{{#each name }}
+	<h1>{{names}} </h1>
+	<input type="hidden" id="hiddenName" value="{{names}} ">
 	<table class="table table-bordered">
 	<thead>
 		<tr>
@@ -47,5 +49,6 @@
 		{{/each}}
 		</tbody>
 	</table>
+	{{/each}}
 	<button class="js-clear">Clear Shows</button>
 </template>
