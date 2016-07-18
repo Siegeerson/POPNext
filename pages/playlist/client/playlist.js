@@ -23,35 +23,30 @@ Template.playlist.helpers
 					console.log(outputLength)
 					
 					if (object[i].listselect == output[j]) {nameCounter++;}
-
-					
-				
-					}
-					if (nameCounter ==0) 
-					{
-						output[outputLength]=object[i].listselect
-					
-
-					}
-				
-			}
-				var returning = [];
-				for (var k = 0;k<output.length;k++) {
-					returning[k] = ({names:output[k]});
 				}
+				if (nameCounter ==0) 
+				{
+					output[outputLength]=object[i].listselect
+				}				
+			}	
+			var returning = [];
+			for (var k = 0;k<output.length;k++) 
+			{
+				returning[k] = ({names:output[k]});				
+			}
 				
 				
 			return returning;
-
-
 		}
 	}
 )
-Template.playlist.events(
+Template.playlist.events
+(
 	{ 
-    "click .dlt-item":function(events){
-    	const id = $ (".id").val();
-		PlayList.remove(id)
-
-		
-}})
+    	"click .dlt-item":function(events)
+    	{
+    		const id = $ (".id").val();
+			PlayList.remove(id)
+		}
+	}
+)
