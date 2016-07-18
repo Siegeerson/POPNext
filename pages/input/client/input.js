@@ -9,6 +9,18 @@ Template.registerHelper('userEmail',
     return user.services.google.email;
   }
 });
+Template.input.helpers(
+	{
+		userShow:function()
+		{
+			
+			return UserLists.find({}
+                      
+                      )
+		}
+	}
+)
+
 
 // this allows the client access to all the user information
 // this should be removed when the app is deployed
@@ -27,12 +39,13 @@ Template.input.events(
 			 console.log(Meteor.userId());
 			console.log("clicked the button");
 			console.log("clicked button");
+			const listChoice= $(".listselect").val();
 			const genre = $(".genre").val();
 			const show = $(".show").val();
 			const episode = $(".episode").val();
 			const link = $(".link").val();
-			
-			const item = {createdAt:new Date(),mediaForm:genre, name:show, priority:episode, mediaLink:link, userId:Meteor.userId()};
+			const list = $(".list").val();
+			const item = {listselect:listChoice, createdAt:new Date(),mediaForm:genre, name:show, priority:episode, mediaLink:link, play:list, userId:Meteor.userId()};
 			console.dir(item);
 			PlayList.insert(item);
 			Router.go("playlist");

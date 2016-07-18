@@ -19,6 +19,7 @@ table {
 		<!-- Here is the standard Bootstrap code for a Navigation bar taken directly from getbootstrap.com/components -->
 		<nav class="navbar navbar-default">
 		  <div class="container-fluid">
+<<<<<<< HEAD
 		    <!-- Brand and toggle get grouped for better mobile display -->
 		    <div class="navbar-header">
 		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -41,6 +42,20 @@ table {
 
 					<li><a href="{{pathFor 'input'}}">Input</a></li>
 							<!-- add more navigation buttons here -->
+=======
+
+				<a class="navbar-brand" href="{{pathFor 'home'}}"><img width=25% src="images/logo.png" alt="Logo of PopNEXT"></a>
+
+				<ul class="nav nav-pills">
+				  <li role="presentation"><a href="{{pathFor 'about'}}">About</a></li>
+				  <li><a href="{{pathFor 'ourteam'}}">Our Team</a></li>
+				  <li><a href="{{pathFor 'playlist'}}">Playlist</a></li>
+
+				  <li><a href="{{pathFor 'input'}}">Input</a></li>
+				  <li><a href="{{pathFor 'listofplaylists'}}">Add a playlist</a></li>
+
+					<!-- add more li's here for your navigation bar -->
+>>>>>>> refs/remotes/origin/multiple-lists-per-user-maybe
 				</ul>
 			<ul class="nav navbar-nav navbar-right">
 			            {{> loginButtons}} <!-- here -->
