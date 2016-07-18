@@ -20,11 +20,15 @@ Template.listofplaylists.events(
 	}
 
 );
-Template.listofplaylists.events(
+Template.listofplaylists.events
+(
 	{ 
-    "click .js-clear":function(events){
+    	"click .dlt-item":function(events)
+    	{
+    		const id = $ (".id").val();
+		UserLists.remove(id)
 
-      Meteor.call("clearPlaylists");
-    },
-  
-  })
+		
+		}
+	}	
+)
