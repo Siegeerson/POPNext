@@ -47,7 +47,7 @@
 
 			</td>
 			<td>
-				<a href="{{thing.mediaLink}}">Link</a>
+				<a href="{{thing.mediaLink}}" target="_blank">Link</a>
 			</td>
 			<td>
 				<input type="hidden" class="id" value="{{thing._id}}">
@@ -57,6 +57,5 @@
 		{{/each}}
 		</tbody>
 	</table>
-	{{/each}}
-	
+	<button class="js-clear">Clear Items  <span class="glyphicon glyphicon-remove"></span></button>
 </template>
