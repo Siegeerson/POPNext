@@ -20,4 +20,11 @@ Template.listofplaylists.events(
 	}
 
 );
+Template.listofplaylists.events(
+	{ 
+    "click .js-clear":function(events){
 
+      Meteor.call("clearPlaylists");
+    },
+  
+  })
