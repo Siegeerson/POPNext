@@ -35,7 +35,15 @@
 	</thead>
 		<tbody>
 		{{#each thing in userShow}}
-		<tr>
+		{{> playlists list=list}}
+		{{/each}}
+		</tbody>
+	</table>
+	{{/each}}
+</template>
+
+<template name="playlists">
+	<tr>
 			<td>
 				{{thing.priority}}
 			</td>
@@ -53,9 +61,5 @@
 				<input type="hidden" class="id" value="{{thing._id}}">
 				<button type="button" class="btn btn-small btn-warning dlt-item">Delete</button>
 			</td>
-		</tr>
-		{{/each}}
-		</tbody>
-	</table>
-	{{/each}}
+	</tr>
 </template>
