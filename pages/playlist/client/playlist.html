@@ -28,6 +28,9 @@
 					Link
 				</h2>
 			</td>
+			<td>
+				
+			</td>
 		</tr>
 	</thead>
 		<tbody>
@@ -41,14 +44,19 @@
 			</td>
 			<td>
 				{{thing.mediaForm}}
+
 			</td>
 			<td>
 				<a href="{{thing.mediaLink}}">Link</a>
+			</td>
+			<td>
+				<input type="hidden" class="id" value="{{thing._id}}">
+				<button type="button" class="btn btn-small btn-warning dlt-item">Delete</button>
 			</td>
 		</tr>
 		{{/each}}
 		</tbody>
 	</table>
 	{{/each}}
-	<button class="js-clear">Clear Shows</button>
+	
 </template>

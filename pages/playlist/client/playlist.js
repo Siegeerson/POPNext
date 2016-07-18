@@ -47,12 +47,11 @@ Template.playlist.helpers
 		}
 	}
 )
-
 Template.playlist.events(
 	{ 
-    "click .js-clear":function(events){
+    "click .dlt-item":function(events){
+    	const id = $ (".id").val();
+		PlayList.remove(id)
 
-      Meteor.call("clearShows");
-    },
-  
-  })
+		
+}})

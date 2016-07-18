@@ -2,13 +2,24 @@
 	<h1>Playlists</h1>
 	<ul>
 		{{#each list in UserLists}}
-			<li>{{list.playlistName}}</li>
+			<li>
+			{{list.playlistName}}
+			<button type="button" class="btn btn-small btn-warning dlt-item">Delete</button>           
+
+			</li>
+		<input type="hidden" class="id" value="{{list._id}}">
 		{{/each}}
 	</ul>
 	<h3>Create a New Playlist</h3>
 	<input type="text" class="listname" id="listname" placeholder="name">
 	<button class="js-list-btn">create</button>
+	<br>
 
 
 
 </template>
+
+
+
+
+			
