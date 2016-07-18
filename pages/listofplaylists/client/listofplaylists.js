@@ -21,15 +21,16 @@ Template.listofplaylists.events
 		},
 	}
 );
-Template.listofplaylists.events
+
+
+Template.playlistitem.events
 (
 	{ 
     	"click .dlt-item":function(events)
     	{
-    		const id = $ (".id").val();
-			UserLists.remove(id)
-
-		
+    		const id = this.list._id
+	        console.log(id);
+		UserLists.remove(id);
 		}
 	}	
 )
