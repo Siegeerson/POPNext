@@ -45,7 +45,7 @@ Template.input.events(
 			const episode = $(".episode").val();
 			const link = $(".link").val();
 			//const list = $(".list").val();
-			const item = {listselect:listChoice, createdAt:new Date(),mediaForm:genre, name:show, priority:episode, mediaLink:link, play:list, userId:Meteor.userId()};
+			const item = {listselect:listChoice, createdAt:new Date(),mediaForm:genre, name:show, priority:episode, mediaLink:link, userId:Meteor.userId()};
 			console.dir(item);
 			PlayList.insert(item);
 			Router.go("playlist");

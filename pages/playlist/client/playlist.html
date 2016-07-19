@@ -102,7 +102,19 @@ function findInPage(str) {
 	</table>
 	{{/each}}
 
-<table name="playlists">
+	
+	<button class="js-clear">Clear Shows</button>
+	<!--<input class="search" id="search"><button class="search-button">Search</button>
+-->
+
+<form name="search" onSubmit="return findInPage(this.string.value);"> 
+<div align="center"> <p> <input name="string" type="text" size=15 onChange="n = 0;">
+<input type="submit" value="Search Page"> </p> </div> 
+</form>
+
+</template>
+<template name="playlists">
+
 	<tr>
 			<td>
 				{{thing.priority}}
@@ -127,16 +139,4 @@ function findInPage(str) {
 	</tr>-->
 
 	</tr>
-</table>
-		</tbody>
-	</table>
-	<button class="js-clear">Clear Shows</button>
-	<!--<input class="search" id="search"><button class="search-button">Search</button>
--->
-
-<form name="search" onSubmit="return findInPage(this.string.value);"> 
-<div align="center"> <p> <input name="string" type="text" size=15 onChange="n = 0;">
-<input type="submit" value="Search Page"> </p> </div> 
-</form>
-
 </template>
