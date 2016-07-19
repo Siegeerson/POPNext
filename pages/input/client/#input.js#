@@ -39,8 +39,7 @@ Template.input.events(
 			 console.log(Meteor.userId());
 			console.log("clicked the button");
 			console.log("clicked button");
-			const listChoice= $(".listselect").val();
-			const genre = $(".genre").val();
+		    const listChoice= $(".listselect").val();			const genre = $(".genre").val();
 			const show = $(".show").val();
 			const episode = $(".episode").val();
 			const link = $(".link").val();

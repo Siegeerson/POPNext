@@ -1,4 +1,4 @@
-<template name="input">
+<template name="inputedit">
 {{#if currentUser}}
   <h1>Add to watch list </h1>
 
@@ -8,21 +8,21 @@
   </div>
   <div>
     <h3>Title</h3>
-    <input type="text" class="show" id="show" value="{{title}}" placeholder="Name">
+    <input type="text" class="show" id="show" value="{{name}}">
   </div>
   <br>
   <div class="form-group">
     <h3>Priority</h3>
-    <input   type="number" class="episode" id="episode" placeholder="Priority">
+    <input   type="number" class="episode" id="episode" value="{{priority}}" placeholder="Priority">
   </div>
   <br>
   
   <h3>Select Playlist</h3>
   <select class="listselect">
   {{#each list in userShow}}
-  <option>
-    {{list.playlistName}}
-  </option>
+    <option>
+    {{list.playlistName}} 
+    </option>
     {{/each}}
   </select>
   <h3>Media Type</h3> 
@@ -75,3 +75,10 @@
     <h2>You must log in to add to Watch list</h2>
   {{/if}}
   </template>
+
+
+<template name="showcategory">
+  <option>
+    {{list.playlistName}} 
+  </option>
+</template>
